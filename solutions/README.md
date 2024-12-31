@@ -19,5 +19,3 @@ True
 False
 >>> is_palindrome("A man a plan a canal Panama")
 True
-
-
