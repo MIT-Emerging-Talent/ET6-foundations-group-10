@@ -14,8 +14,7 @@ Author: Oleksandr Maksymikhin
 def bubble_sort(input_collection: list[int]) -> list[int]:
     """Sort collection using bubble sort algorithm.
 
-    Collection is a set of the same type data.
-    Bubble sort is a sorting algorithm that swaps elements moving larger elements to the end of collection.
+    Sort elements in collection by swapping and moving larger elements to the end of collection.
 
     Parameters:
       input_collection: list[int], collection of unsorted data type int.
