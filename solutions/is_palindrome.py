@@ -32,6 +32,7 @@ def is_palindrome(text: str) -> bool:
         >>> is_palindrome("A man a plan a canal Panama")
         True
     """
+    # Ensure the input is of type string to avoid unexpected errors.
     assert isinstance(text, str), "Input must be a string"
 
     # Normalize the text: remove spaces and convert to lowercase
