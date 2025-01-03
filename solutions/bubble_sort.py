@@ -18,21 +18,32 @@ def bubble_sort(input_collection: list[any]) -> list[any]:
     Sort elements in collection by swapping and moving larger elements to the end of collection.
 
     Parameters:
-      input_collection: list[any], collection of unsorted data of any type.
+      input_collection: list[any], collection of unsorted data of any homogeneous type.
 
     Returns -> list[any], collection of sorted elements with any data type.
 
     Raises:
-      AssertionError: if collection contains elements of different type.
+      AssertionError: if input is not a collection.
+      AssertionError: if collection contains elements of different data types (non-homogeneous).
 
     Examples:
     >>> bubble_sort(1)
     [1]
     >>> bubble_sort([1, 3, 2]])
     [1, 2, 3]
-    >>> bubble_sort([3, 2, 1000000, 1]])
-    [1, 2, 3, 1000000]
+    >>> bubble_sort([3, 2, 100500, 1]])
+    [1, 2, 3, 100500]
     """
+
+    # defensive assertion to check that input is a collection list
+    assert isinstance(input_collection, list), "Input is not a collection"
+
+    # defensive assertion to check that collection is homogeneous
+    assert all(
+        isinstance(item, type(input_collection[0])) for item in input_collection
+    ), "Collection is not homogeneous"
+
+    # copy collection to avoid side effect
     collection = input_collection.copy()
     # define collection length
     collection_length = len(collection)
@@ -40,9 +51,9 @@ def bubble_sort(input_collection: list[any]) -> list[any]:
     for current_item_index in range(collection_length):
         # flag to break if the last run didn't swap any item
         already_sorted = True
-        # second loop to compare item with adjacent one
+        # second loop to compare/swap item with adjacent one
         for swap_index in range(collection_length - current_item_index - 1):
-            # swap items if next adjacent item is bigger
+            # swap items if the next adjacent item is smaller
             if collection[swap_index] > collection[swap_index + 1]:
                 (collection[swap_index], collection[swap_index + 1]) = (
                     collection[swap_index + 1],
