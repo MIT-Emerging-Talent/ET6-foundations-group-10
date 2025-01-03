@@ -27,11 +27,11 @@ def bubble_sort(input_collection: list[any]) -> list[any]:
       AssertionError: if collection contains elements of different data types (non-homogeneous).
 
     Examples:
-    >>> bubble_sort(1)
+    >>> bubble_sort([1])
     [1]
-    >>> bubble_sort([1, 3, 2]])
+    >>> bubble_sort([1, 3, 2])
     [1, 2, 3]
-    >>> bubble_sort([3, 2, 100500, 1]])
+    >>> bubble_sort([3, 2, 100500, 1])
     [1, 2, 3, 100500]
     """
 
@@ -41,7 +41,7 @@ def bubble_sort(input_collection: list[any]) -> list[any]:
     # defensive assertion to check that collection is homogeneous
     assert all(
         isinstance(item, type(input_collection[0])) for item in input_collection
-    ), "Collection is not homogeneous"
+    ), "Input collection is not homogeneous"
 
     # copy collection to avoid side effect
     collection = input_collection.copy()

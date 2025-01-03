@@ -6,7 +6,7 @@ Test module for bubble_sort() function.
 Test categories:
     - Standard cases: lists of type int with different lengths
     - Edge cases: empty lists, single element
-    - Different data type: char, string, bool
+    - Different data types: char, string, bool
     - Defensive tests:
         - side effects protection
         - input is not a collection
@@ -23,18 +23,6 @@ from ..bubble_sort import bubble_sort
 
 class TestBubbleSort(unittest.TestCase):
     """Test the bubble_sort function."""
-
-    # Uncomment for predictive stepping
-    # test_1 = bubble_sort([])
-    # test_2 = bubble_sort([1])
-    # test_3 = bubble_sort([2, 1])
-    # test_4 = bubble_sort([3, 2, 1])
-    # test_5 = bubble_sort([2, 3, 100500, 1])
-    # test_6 = bubble_sort(["b", "a", "c"])
-    # test_7 = bubble_sort(["cabbage", "banana", "apple"])
-    # test_8 = bubble_sort([True, False, True, False])
-    # test_10 = bubble_sort("apple")
-    # test_11 = bubble_sort([3, "two", 1])
 
     def test_1_empty_list(self):
         """It should return [] for input []"""
@@ -87,8 +75,7 @@ class TestBubbleSort(unittest.TestCase):
     def test_9_side_effect_protection(self):
         """It should return [3, 2, 1] of initial input"""
         input_list = [3, 2, 1]
-        copy_for_sorting = input_list.copy()
-        bubble_sort(copy_for_sorting)
+        bubble_sort(input_list)
         self.assertEqual(input_list, [3, 2, 1])
 
     def test_10_non_collection_input(self):
