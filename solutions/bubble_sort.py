@@ -18,9 +18,9 @@ def bubble_sort(input_collection: list[any]) -> list[any]:
     Sort elements in collection by swapping and moving larger elements to the end of collection.
 
     Parameters:
-      input_collection: list[int], collection of unsorted data type int.
+      input_collection: list[any], collection of unsorted data of any type.
 
-    Returns -> list[int], collection of sorted data type int.
+    Returns -> list[any], collection of sorted elements with any data type.
 
     Raises:
       AssertionError: if collection contains elements of different type.
@@ -33,7 +33,7 @@ def bubble_sort(input_collection: list[any]) -> list[any]:
     >>> bubble_sort([3, 2, 1000000, 1]])
     [1, 2, 3, 1000000]
     """
-    collection = input_collection
+    collection = input_collection.copy()
     # define collection length
     collection_length = len(collection)
     # first loop to traverse the collection

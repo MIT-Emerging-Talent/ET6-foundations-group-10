@@ -77,3 +77,10 @@ class TestBubbleSort(unittest.TestCase):
         actual = bubble_sort([True, False, True, False])
         expected = [False, False, True, True]
         self.assertEqual(actual, expected)
+
+    def test_side_effect_protection(self):
+        """It should return [3, 2, 1] of initial input"""
+        input_list = [3, 2, 1]
+        copy_for_sorting = input_list.copy()
+        bubble_sort(copy_for_sorting)
+        self.assertEqual(input_list, [3, 2, 1])
