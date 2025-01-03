@@ -12,7 +12,7 @@ Author: Oleksandr Maksymikhin
 
 
 # def bubble_sort(input_collection: list[int]) -> list[int]:
-def bubble_sort(input_collection: list[int]) -> list[int]:
+def bubble_sort(input_collection: list[any]) -> list[any]:
     """Sort collection using bubble sort algorithm.
 
     Sort elements in collection by swapping and moving larger elements to the end of collection.
@@ -33,9 +33,7 @@ def bubble_sort(input_collection: list[int]) -> list[int]:
     >>> bubble_sort([3, 2, 1000000, 1]])
     [1, 2, 3, 1000000]
     """
-
-    # copy collection to avoid side effect
-    collection = input_collection.copy()
+    collection = input_collection
     # define collection length
     collection_length = len(collection)
     # first loop to traverse the collection
