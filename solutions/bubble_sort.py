@@ -11,6 +11,7 @@ Author: Oleksandr Maksymikhin
 """
 
 
+# def bubble_sort(input_collection: list[int]) -> list[int]:
 def bubble_sort(input_collection: list[int]) -> list[int]:
     """Sort collection using bubble sort algorithm.
 
@@ -32,6 +33,26 @@ def bubble_sort(input_collection: list[int]) -> list[int]:
     >>> bubble_sort([3, 2, 1000000, 1]])
     [1, 2, 3, 1000000]
     """
-    # add return statement to avoid lint errors
-    output_collection = input_collection
-    return output_collection
+
+    # copy collection to avoid side effect
+    collection = input_collection.copy()
+    # define collection length
+    collection_length = len(collection)
+    # first loop to traverse the collection
+    for current_item_index in range(collection_length):
+        # flag to break if the last run didn't swap any item
+        already_sorted = True
+        # second loop to compare item with adjacent one
+        for swap_index in range(collection_length - current_item_index - 1):
+            # swap items if next adjacent item is bigger
+            if collection[swap_index] > collection[swap_index + 1]:
+                (collection[swap_index], collection[swap_index + 1]) = (
+                    collection[swap_index + 1],
+                    collection[swap_index],
+                )
+                already_sorted = False
+        # break loop if the last run didn't swap any item
+        if already_sorted:
+            break
+    # return sorted collection
+    return collection
