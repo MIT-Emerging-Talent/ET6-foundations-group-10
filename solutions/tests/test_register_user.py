@@ -9,7 +9,7 @@ Test categories:
     - Defensive tests: invalid inputs for name, age, and email
 
 Created on: 2025-01-03
-Author: Your Name
+Author: Emre Biyik
 """
 
 import unittest
