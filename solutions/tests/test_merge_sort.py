@@ -83,3 +83,10 @@ class TestMergeSort(unittest.TestCase):
         actual = merge_sort([True, False, False, True])
         expected = [False, False, True, True]
         self.assertEqual(actual, expected)
+
+    def test_9_side_effect_protection(self):
+        """It should return [3, 2, 1] of initial input"""
+        input_list = [3, 2, 1, 100500]
+        copy_for_sorting = input_list.copy()
+        merge_sort(copy_for_sorting)
+        self.assertEqual(input_list, [3, 2, 1, 100500])

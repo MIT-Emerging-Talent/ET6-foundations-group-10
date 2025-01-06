@@ -36,14 +36,15 @@ def merge_sort(input_collection: list[any]) -> list[any]:
     >>> merge_sort([3, 2, 100500, 1])
     [1, 2, 3, 100500]
     """
-    if len(input_collection) < 2:
+    collection = input_collection.copy()
+    if len(collection) < 2:
         return input_collection
 
     # divide collection to two parts
-    split_index = len(input_collection) // 2
+    split_index = len(collection) // 2
 
-    left = merge_sort(input_collection[:split_index])
-    right = merge_sort(input_collection[split_index:])
+    left = merge_sort(collection[:split_index])
+    right = merge_sort(collection[split_index:])
 
     # return merged collection, sorting left and right parts
     return merge(left, right)
