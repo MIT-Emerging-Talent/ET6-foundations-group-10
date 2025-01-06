@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 A module for merging of two sorted collection into one sorted collection.
+Processed data types: int, float, string, bool.
 
 Module contents:
     - merge: merge two sorted collections into one sorted collection.
@@ -17,17 +18,17 @@ def merge(left: list[any], right: list[any]) -> list[any]:
     Combine two sorted homogeneous collections into one sorted collection
 
     Parameters:
-      left: list[any], first sorted collection of type any.
-      right: list[any], second sorted collection of type any.
+      left: list[any], first sorted collection of data types (int, float, string, bool).
+      right: list[any], second sorted collection of data types (int, float, string, bool).
 
-    Returns -> list[any], collection of sorted elements with type any.
+    Returns -> list[any], sorted collection of data types (int, float, string, bool).
 
     Raises:
       AssertionError: left is not a collection.
       AssertionError: right is not a collection.
       AssertionError: left collection contains elements of different data types (non-homogeneous).
       AssertionError: right collection contains elements of different data types (non-homogeneous).
-      AssertionError: data of left and right collections have different types (non-homogeneous).
+      AssertionError: left and right contain elements of different data types(non-homogeneous).
 
     Examples:
     >>> merge([2], [1])
@@ -37,6 +38,21 @@ def merge(left: list[any], right: list[any]) -> list[any]:
     >>> merge([2, 5, 100500], [1, 9])
     [1, 2, 5, 9, 100500]
     """
+    # defensive assertion to check that input is a collections are lists
+    assert isinstance(left, list), "Input left is not a collection"
+    assert isinstance(right, list), "Input right is not a collection"
+
+    # defensive assertion to check that input collections are homogeneous
+    assert all(
+        isinstance(item, type(left[0])) for item in left
+    ), "Input left is not homogeneous"
+    assert all(
+        isinstance(item, type(right[0])) for item in right
+    ), "Input right is not homogeneous"
+    assert isinstance(
+        left[0], type(right[0])
+    ), "Input left and right are not homogeneous"
+
     # check if left or right collection is empty
     if len(left) == 0:
         return right
