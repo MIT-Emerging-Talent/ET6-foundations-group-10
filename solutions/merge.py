@@ -11,16 +11,16 @@ Author: Oleksandr Maksymikhin
 """
 
 
-def merge(left: list[int], right: list[int]) -> list[int]:
+def merge(left: list[any], right: list[any]) -> list[any]:
     """Merge two sorted collections into one sorted collection.
 
     Combine two sorted homogeneous collections into one sorted collection
 
     Parameters:
-      left: list[int], first sorted collection of type int.
-      right: list[int], second sorted collection of type int.
+      left: list[any], first sorted collection of type any.
+      right: list[any], second sorted collection of type any.
 
-    Returns -> list[int], collection of sorted elements with type int.
+    Returns -> list[any], collection of sorted elements with type any.
 
     Raises:
       AssertionError: left is not a collection.

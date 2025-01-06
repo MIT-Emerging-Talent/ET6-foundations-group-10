@@ -14,15 +14,15 @@ Author: Oleksandr Maksymikhin
 from solutions.merge import merge
 
 
-def merge_sort(input_collection: list[int]) -> list[int]:
+def merge_sort(input_collection: list[any]) -> list[any]:
     """Sort collection using merge sort algorithm.
 
     Sort elements in collection by splitting the collection in two parts and launching the merge.
 
     Parameters:
-      input_collection: list[int], collection of unsorted data type int.
+      input_collection: list[any], collection of unsorted data type any.
 
-    Returns -> list[int], collection of sorted elements with type int.
+    Returns -> list[any], collection of sorted elements with type any.
 
     Raises:
       AssertionError: if input is not a collection.
