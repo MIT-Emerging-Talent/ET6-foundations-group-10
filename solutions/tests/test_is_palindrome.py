@@ -1,3 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Unit tests for the is_palindrome function.
+
+This module contains test cases for the is_palindrome function,
+which checks if a string is a palindrome. The tests cover:
+
+- Empty strings
+- Single-character strings
+- Palindromes with lowercase, mixed-case, and spaces
+- Palindromes containing numbers
+- Palindromes containing special characters
+- Non-palindromes
+
+Created on 2024-12-30
+Author: Emre Biyik
+"""
+
 import unittest
 from solutions.is_palindrome import is_palindrome
 
@@ -52,6 +71,14 @@ class TestIsPalindrome(unittest.TestCase):
     def test_non_palindrome_with_special_characters_returns_false(self):
         """It should return False for non-palindromes with special characters."""
         self.assertFalse(is_palindrome("hello!"))
+
+    def test_special_characters_palindrome_positive(self):
+        """It should return True for special character palindrome."""
+        self.assertTrue(is_palindrome("$+$"))  # Palindrome
+
+    def test_special_characters_palindrome_negative(self):
+        """It should return False for non-palindrome special characters."""
+        self.assertFalse(is_palindrome("$+#"))  # Non-palindrome
 
 
 if __name__ == "__main__":
