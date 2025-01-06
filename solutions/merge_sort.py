@@ -7,11 +7,11 @@ Splitting and sorting function.
 Module contents:
     - merge_sort: splitting the collection and launching the merge.
 
-Created on 2024-01-06
+Created on 2024-01-05
 Author: Oleksandr Maksymikhin
 """
 
-from .merge import merge
+from solutions.merge import merge
 
 
 def merge_sort(input_collection: list[int]) -> list[int]:
@@ -36,6 +36,14 @@ def merge_sort(input_collection: list[int]) -> list[int]:
     >>> merge_sort([3, 2, 100500, 1])
     [1, 2, 3, 100500]
     """
+    if len(input_collection) < 2:
+        return input_collection
 
-    merge([1], [2])
-    return input_collection
+    # divide collection to two parts
+    split_index = len(input_collection) // 2
+
+    left = merge_sort(input_collection[:split_index])
+    right = merge_sort(input_collection[split_index:])
+
+    # return merged collection, sorting left and right parts
+    return merge(left, right)
