@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 A module for sorting collection using bubble sort algorithm.
+Processed types: int, float, str, bool
 
 Module contents:
     - bubble_sort: sort the collection in ascending order.
@@ -10,17 +11,21 @@ Created on 2024-01-02
 Author: Oleksandr Maksymikhin
 """
 
+from typing import TypeVar
+
+T = TypeVar("T", int, float, str, bool)
+
 
 # def bubble_sort(input_collection: list[int]) -> list[int]:
-def bubble_sort(input_collection: list[any]) -> list[any]:
+def bubble_sort(input_collection: list[T]) -> list[T]:
     """Sort collection using bubble sort algorithm.
 
     Sort elements in collection by swapping and moving larger elements to the end of collection.
 
     Parameters:
-      input_collection: list[any], collection of unsorted data of any homogeneous type.
+      input_collection: list[T], collection of unsorted data with data types (T): int, float, str, bool.
 
-    Returns -> list[any], collection of sorted elements with any data type.
+    Returns -> list[T], collection of sorted elements with data types (T): int, float, str, bool.
 
     Raises:
       AssertionError: if input is not a collection.
