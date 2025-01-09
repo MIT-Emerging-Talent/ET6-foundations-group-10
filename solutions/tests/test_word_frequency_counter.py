@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+This is test module for counting the frequency of words in a given sentence.
+
+Test categories:
+    - Standard cases: typical strings with different lengths
+    - Edge cases: white space input
+    - Defensive tests: non string inputs
+
 Created on 01.01.2025
 
 @author: Ahmad Hamed Dehzad
