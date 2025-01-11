@@ -71,4 +71,7 @@ These lessons enhanced both technical and collaboration skills, laying the found
 
 ---
 
-This retrospective reflects the challenges, achievements, and lessons learned during the GitHub Team Project. The project provided an invaluable opportunity to see a software development process in its entirety, from local pushes to collaborative reviews and debugging. Moving forward, these experiences will guide us in delivering even more efficient and successful projects. Thank you all for your dedication and effort!
+This retrospective reflects the challenges, achievements, and lessons learned during the GitHub Team Project.  
+The project provided an invaluable opportunity to see a software development process in its entirety, from local pushes to collaborative reviews and debugging.  
+Moving forward, these experiences will guide us in delivering even more efficient and successful projects.  
+Thank you all for your dedication and effort!
