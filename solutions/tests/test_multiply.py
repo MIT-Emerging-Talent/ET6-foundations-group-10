@@ -37,7 +37,7 @@ class TestMultiplyFunction(unittest.TestCase):
     def test_multiply_invalid_first_argument(self):
         """Test error when the first argument is not a number."""
         with self.assertRaises(TypeError):
-            multiply("a", 5)
+            multiply("a", 5) 
 
     def test_multiply_invalid_second_argument(self):
         """Test error when the second argument is not a number."""
@@ -45,5 +45,5 @@ class TestMultiplyFunction(unittest.TestCase):
             multiply(3, None)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     unittest.main()
