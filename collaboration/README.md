@@ -1,8 +1,8 @@
 # Collaboration
 
-## Group “ET6-foundations-group-10”
+## Group “ZeroThroughTen”
 
-The group is focused on professional communication in developing the _**''“ET6-foundations-group-10”**_ project to implement the _Foundations Track_ syllabus of the [_MIT Emerging Talent_](https://emergingtalent.mit.edu/) program.
+The group is focused on professional communication in developing the _**''“ZeroThroughTen”**_ project to implement the _Foundations Track_ syllabus of the [_MIT Emerging Talent_](https://emergingtalent.mit.edu/) program.
 
 ### Norms of the group
 
