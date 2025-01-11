@@ -25,15 +25,15 @@ def merge_sort(input_collection: list[T]) -> list[T]:
     Sort elements in collection by splitting the collection in two parts and launch merge.
 
     Parameters:
-      input_collection: list[T], collection of unsorted elements of data types (int, float, string, bool).
+        - input_collection: list[T], collection of unsorted elements of data types (int, float, string, bool).
 
     Returns -> list[T], collection of sorted elements of data types (int, float, string, bool).
 
     Raises:
-      AssertionError: if input is not a collection.
-      AssertionError: if input collection is empty.
-      AssertionError: if input is not a data type processed by module (int, float, string, bool).
-      AssertionError: if collection contains elements of different data types (non-homogeneous).
+        - AssertionError: if input is not a collection.
+        - AssertionError: if input collection is empty.
+        - AssertionError: if input is not a data type processed by module (int, float, string, bool).
+        - AssertionError: if collection contains elements of different data types (non-homogeneous).
 
     Examples:
     >>> merge_sort([1])
@@ -86,17 +86,17 @@ def merge(left: list[T], right: list[T]) -> list[T]:
     Combine two sorted homogeneous collections into one sorted collection
 
     Parameters:
-      left: list[T], first sorted collection of data types (int, float, string, bool).
-      right: list[T], second sorted collection of data types (int, float, string, bool).
+        - left: list[T], first sorted collection of data types (int, float, string, bool).
+        - right: list[T], second sorted collection of data types (int, float, string, bool).
 
     Returns -> list[T], sorted collection of data types (int, float, string, bool).
 
     Raises:
-      AssertionError: left is not a collection.
-      AssertionError: right is not a collection.
-      AssertionError: left collection contains elements of different data types (non-homogeneous).
-      AssertionError: right collection contains elements of different data types (non-homogeneous).
-      AssertionError: left and right contain elements of different data types(non-homogeneous).
+        - AssertionError: left is not a collection.
+        - AssertionError: right is not a collection.
+        - AssertionError: left collection contains elements of different data types (non-homogeneous).
+        - AssertionError: right collection contains elements of different data types (non-homogeneous).
+        - AssertionError: left and right contain elements of different data types(non-homogeneous).
 
     Examples:
     >>> merge([2], [1])

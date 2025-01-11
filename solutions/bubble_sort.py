@@ -23,13 +23,13 @@ def bubble_sort(input_collection: list[T]) -> list[T]:
     Sort elements in collection by swapping and moving larger elements to the end of collection.
 
     Parameters:
-      input_collection: list[T], collection of unsorted data with data types (T): int, float, str, bool.
+        - input_collection: list[T], collection of unsorted data with data types (T): int, float, str, bool.
 
     Returns -> list[T], collection of sorted elements with data types (T): int, float, str, bool.
 
     Raises:
-      AssertionError: if input is not a collection.
-      AssertionError: if collection contains elements of different data types (non-homogeneous).
+        - AssertionError: if input is not a collection.
+        - AssertionError: if collection contains elements of different data types (non-homogeneous).
 
     Examples:
     >>> bubble_sort([1])
