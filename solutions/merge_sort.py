@@ -5,7 +5,7 @@ A module for sorting non empty collection of build-in elementary Python data typ
 (int, float, str, bool) using merge sorting algorithm.
 
 Module contents:
-    - merge_sort: function that splits the collection and launches the merge.
+    - merge_sort: function that splits the collection and launches the merge,
     - merge: function that merges two sorted collections into one sorted collection.
 
 Created on 2024-01-05
