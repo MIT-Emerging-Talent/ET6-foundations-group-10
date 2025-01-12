@@ -22,6 +22,12 @@ The primary goal of our group is to enhance our understanding and practical skil
 - Focus on writing more complete and readable solutions.
 - Gain deeper experience with version control tools like Git and GitHub, especially in team projects.
 
+### Oleksandr Maksymikhin
+
+- Study the Python programming language.
+- Improve skills for participation in group projects using the version control system GitHub.
+- Investigate the functionality of GitHub (Issues, Project Board, Actions, CI/CD).
+
 ---
 
 ## Group Approach
