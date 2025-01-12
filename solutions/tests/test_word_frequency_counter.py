@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-This is test module for counting the frequency of words in a given sentence.
+This is a test module for counting the frequency of words in a given sentence.
 
 Test categories:
     - Standard cases: typical strings with different lengths
-    - Edge cases: white space input
-    - Defensive tests: non string inputs
+    - Edge cases: white space input and punctuation handling
+    - Defensive tests: non-string inputs
 
 Created on 01.01.2025
-
 @author: Ahmad Hamed Dehzad
 """
 
 import unittest
-
-from solutions.word_frequency_counter import word_frequency_counter
+from ..word_frequency_counter import word_frequency_counter
 
 
 class TestWordFrequencyCounter(unittest.TestCase):
@@ -46,9 +44,9 @@ class TestWordFrequencyCounter(unittest.TestCase):
         self.assertEqual(actual, expected)
 
     def test_with_punctuation(self):
-        """It should handle words with punctuation correctly"""
+        """It should handle punctuation by ignoring it"""
         actual = word_frequency_counter("Hello, world! Hello.")
-        expected = {"hello,": 1, "world!": 1, "hello.": 1}
+        expected = {"hello": 2, "world": 1}  # Updated expected result
         self.assertEqual(actual, expected)
 
     def test_numbers_in_string(self):
@@ -67,3 +65,7 @@ class TestWordFrequencyCounter(unittest.TestCase):
         actual = word_frequency_counter("   Hello   world   ")
         expected = {"hello": 1, "world": 1}
         self.assertEqual(actual, expected)
+        
+    
+if __name__ == "__main__":
+    unittest.main()
