@@ -1,10 +1,10 @@
 <!--
-    this template is for inspiration, feel free to change it however you like!
+    This template is for inspiration, feel free to change it however you like!
 
     Careful! be sure to protect your privacy when filling out this document
         everything you write here will be public
         so share only what you are comfortable sharing online
-        you can share the rest in confidence with you group by another channel
+        you can share the rest in confidence with your group by another channel
 -->
 
 # Communication
@@ -13,8 +13,8 @@
 
 ## Communication Schedule
 
-| **Day**       | **How**                        | **Topic of Discussion**   |
-|---------------|--------------------------------|---------------------------|
+| **Day**       | **How**                        | **Topic of Discussion**             |
+|---------------|--------------------------------|-------------------------------------|
 | Flexible      | Slack (Daily)                 | Quick updates, general communication |
 | Twice a week  | Google Meet                   | Progress updates, task discussions, and important decisions |
 
