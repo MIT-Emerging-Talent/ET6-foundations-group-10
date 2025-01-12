@@ -3,8 +3,8 @@
 """
 Unit tests for the to_uppercase function.
 
-Created on XX XX XX
-@author: Your Name
+Created on 11 01 2025
+@author: Nimah Masuud
 """
 
 import unittest
